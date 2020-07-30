@@ -1,0 +1,34 @@
+@name PrimeritoDía 
+@inputs XWL:wirelink
+@outputs 
+@persist 
+@trigger 
+
+P = players()
+
+runOnChat(1)
+hideChat(1)
+for(X=0, P:count()){
+    if(chatClk(P[X,entity])){
+        String = P[X,entity]:lastSaid():explode(" ")
+        if(String[1,string] == "/puta"){
+            print("Tu si que eres puta")
+        }
+    }
+}
+#[if(lastSaid()== "/puta"){
+    for(I=0, P:count()){
+    print(P[I,entity]:name())  
+      
+    }
+    print("Tu si que eres puta")   
+}]#
+
+#[
+    Documentation and examples are available at:
+    https://github.com/wiremod/wire/wiki/Expression-2
+
+    Discord is available at https://discord.gg/H8UKY3Y
+    Reddit is available at https://www.reddit.com/r/wiremod
+    Report any bugs you find here https://github.com/wiremod/wire/issues
+]#
